@@ -36,3 +36,11 @@ add_executable(Worker ${src_worker})
 #==========================================================
 file(GLOB_RECURSE src_sink "./src/modules/sink/*.cpp")
 add_executable(Sink ${src_sink})
+
+#==========================================================
+# Linker
+#==========================================================
+target_link_libraries(Server PRIVATE zmq)
+target_link_libraries(Balancer PRIVATE zmq)
+target_link_libraries(Worker PRIVATE zmq)
+target_link_libraries(Sink PRIVATE zmq)
