@@ -7,7 +7,7 @@ project(mock_distribution)
 set(CMAKE_CXX_STANDARD 17)
 
 # Include directories
-include_directories('./zmq/vendor/include/)
+include_directories(./vendor/zmq/include/)
 
 # Set output directory
 set(out_dir ${CMAKE_CURRENT_SOURCE_DIR}/build/${CMAKE_BUILD_TYPE}/)
